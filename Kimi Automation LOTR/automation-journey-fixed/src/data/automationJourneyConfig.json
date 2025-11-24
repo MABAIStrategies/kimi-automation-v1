@@ -1,0 +1,210 @@
+{
+  "brand": {
+    "companyName": "MAB AI Strategies LLC",
+    "logoUrl": "/assets/logo.svg",
+    "colorScheme": {
+      "parchment": "#f4f1e8",
+      "ink": "#2c1810",
+      "gold": "#d4af37"
+    }
+  },
+  "viewer": {
+    "firstNamePlaceholder": "{{FIRST_NAME}}"
+  },
+  "chapters": [
+    {
+      "id": "chapter-1",
+      "title": "Chapter 1: The Foundation Forge",
+      "summaryOneLiner": "Automate your core business processes with intelligent workflow orchestration",
+      "diagram": {
+        "type": "svg",
+        "src": "/assets/chapters/foundation-forge.svg"
+      },
+      "hoverInfo": [
+        "Streamlines repetitive tasks across departments",
+        "Reduces manual errors by 85%",
+        "Integrates with existing tools seamlessly"
+      ],
+      "tools": ["Zapier API", "Microsoft Power Automate", "Google Workspace", "Slack"],
+      "pricing": {
+        "costUSD": 2500,
+        "implHours": 6
+      },
+      "savings": {
+        "hoursPerWeek": 8,
+        "dollarsPerYear": 16640
+      }
+    },
+    {
+      "id": "chapter-2",
+      "title": "Chapter 2: The Data Sanctum",
+      "summaryOneLiner": "Transform raw data into actionable insights with AI-powered analytics",
+      "diagram": {
+        "type": "svg",
+        "src": "/assets/chapters/data-sanctum.svg"
+      },
+      "hoverInfo": [
+        "Automated data collection and cleansing",
+        "Real-time analytics dashboards",
+        "Predictive modeling capabilities"
+      ],
+      "tools": ["Python Pandas", "Tableau API", "Google Analytics", "Custom ML Models"],
+      "pricing": {
+        "costUSD": 3200,
+        "implHours": 8
+      },
+      "savings": {
+        "hoursPerWeek": 12,
+        "dollarsPerYear": 24960
+      }
+    },
+    {
+      "id": "chapter-3",
+      "title": "Chapter 3: The Communication Nexus",
+      "summaryOneLiner": "Revolutionize customer and team communications with AI assistants",
+      "diagram": {
+        "type": "svg",
+        "src": "/assets/chapters/communication-nexus.svg"
+      },
+      "hoverInfo": [
+        "24/7 automated customer support",
+        "Intelligent email categorization",
+        "Meeting scheduling automation"
+      ],
+      "tools": ["OpenAI API", "Twilio", "Calendly", "Intercom"],
+      "pricing": {
+        "costUSD": 1800,
+        "implHours": 4
+      },
+      "savings": {
+        "hoursPerWeek": 15,
+        "dollarsPerYear": 31200
+      }
+    },
+    {
+      "id": "chapter-4",
+      "title": "Chapter 4: The Process Alchemist",
+      "summaryOneLiner": "Optimize complex business processes with intelligent automation",
+      "diagram": {
+        "type": "svg",
+        "src": "/assets/chapters/process-alchemist.svg"
+      },
+      "hoverInfo": [
+        "End-to-end process automation",
+        "Adaptive workflow optimization",
+        "Cross-system integration"
+      ],
+      "tools": ["UiPath", "Automation Anywhere", "SAP API", "Oracle Integration"],
+      "pricing": {
+        "costUSD": 4500,
+        "implHours": 12
+      },
+      "savings": {
+        "hoursPerWeek": 20,
+        "dollarsPerYear": 41600
+      }
+    },
+    {
+      "id": "chapter-5",
+      "title": "Chapter 5: The Insight Oracle",
+      "summaryOneLiner": "Harness predictive analytics for strategic decision making",
+      "diagram": {
+        "type": "svg",
+        "src": "/assets/chapters/insight-oracle.svg"
+      },
+      "hoverInfo": [
+        "Advanced predictive analytics",
+        "Risk assessment automation",
+        "Market trend forecasting"
+      ],
+      "tools": ["TensorFlow", "Azure ML", "AWS SageMaker", "Databricks"],
+      "pricing": {
+        "costUSD": 3800,
+        "implHours": 10
+      },
+      "savings": {
+        "hoursPerWeek": 10,
+        "dollarsPerYear": 20800
+      }
+    }
+  ],
+  "roi": {
+    "assumptions": {
+      "workingWeeksPerYear": 48,
+      "implementationBuffer": 1.2,
+      "maintenanceFactor": 0.1
+    },
+    "sliders": [
+      {
+        "id": "avgHourlyCost",
+        "label": "Average Hourly Cost",
+        "min": 25,
+        "max": 200,
+        "default": 65,
+        "step": 5
+      },
+      {
+        "id": "hoursSavedPerWeek",
+        "label": "Additional Hours Saved Per Week",
+        "min": 0,
+        "max": 50,
+        "default": 15,
+        "step": 1
+      },
+      {
+        "id": "teamSize",
+        "label": "Team Size",
+        "min": 1,
+        "max": 100,
+        "default": 5,
+        "step": 1
+      }
+    ],
+    "formulas": {
+      "annualSavings": "(hoursSavedPerWeek * workingWeeksPerYear * avgHourlyCost * teamSize) + selectedChaptersSavings",
+      "paybackPeriod": "totalImplementationCost / (annualSavings / 12)",
+      "roiPercentage": "((annualSavings - totalImplementationCost) / totalImplementationCost) * 100"
+    }
+  },
+  "packages": [
+    {
+      "tier": "Core",
+      "includedChapterIds": ["chapter-1", "chapter-2"],
+      "priceUSD": 5000,
+      "description": "Essential automation foundation for small teams",
+      "features": [
+        "Basic workflow automation",
+        "Data integration",
+        "Email support",
+        "3-month implementation"
+      ]
+    },
+    {
+      "tier": "Growth",
+      "includedChapterIds": ["chapter-1", "chapter-2", "chapter-3"],
+      "priceUSD": 8500,
+      "description": "Comprehensive automation suite for growing businesses",
+      "features": [
+        "All Core features",
+        "AI-powered communications",
+        "Advanced analytics",
+        "Priority support",
+        "2-month implementation"
+      ]
+    },
+    {
+      "tier": "Scale",
+      "includedChapterIds": ["chapter-1", "chapter-2", "chapter-3", "chapter-4", "chapter-5"],
+      "priceUSD": 14000,
+      "description": "Enterprise-grade automation with predictive insights",
+      "features": [
+        "All Growth features",
+        "Process optimization",
+        "Predictive analytics",
+        "24/7 support",
+        "1-month implementation",
+        "Custom integrations"
+      ]
+    }
+  ]
+}
