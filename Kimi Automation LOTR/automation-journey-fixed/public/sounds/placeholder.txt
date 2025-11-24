@@ -1,0 +1,13 @@
+# Audio Placeholder
+
+This folder should contain audio files:
+- ambient-fantasy.mp3
+- page-flip.mp3
+- success-chime.mp3
+- button-click.mp3
+
+The application will work without these files (with console warnings).
+You can add royalty-free audio from sites like:
+- freesound.org
+- pixabay.com/music
+- incompetech.com

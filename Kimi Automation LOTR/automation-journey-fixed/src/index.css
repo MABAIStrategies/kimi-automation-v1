@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-parchment text-ink font-sans overflow-x-hidden;
+  }
+}
+
+@layer components {
+  .parchment-texture {
+    background-image: 
+      repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(44, 24, 16, 0.03) 2px,
+        rgba(44, 24, 16, 0.03) 4px
+      );
+  }
+  
+  .ancient-border {
+    @apply border-4 border-double border-ink/30 rounded-lg shadow-2xl;
+    box-shadow: 
+      inset 0 0 0 2px rgba(212, 175, 55, 0.3),
+      0 10px 30px rgba(44, 24, 16, 0.2);
+  }
+  
+  .fantasy-button {
+    @apply px-8 py-4 bg-gradient-to-br from-gold to-gold-dark text-ink font-bold rounded-lg
+           shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl
+           active:scale-95 border-2 border-gold-dark;
+  }
+  
+  .fantasy-button-secondary {
+    @apply px-6 py-3 bg-gradient-to-br from-ember to-ember-dark text-parchment font-semibold
+           rounded-lg shadow-md transform transition-all duration-300 hover:scale-105
+           hover:shadow-lg active:scale-95 border-2 border-ember-dark;
+  }
+  
+  .ancient-ink {
+    @apply text-ink font-serif font-bold;
+    text-shadow: 0 1px 2px rgba(44, 24, 16, 0.1);
+  }
+  
+  .gold-glow {
+    @apply text-gold;
+    text-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+  }
+  
+  .book-page {
+    @apply min-h-screen bg-gradient-to-br from-parchment via-parchment-dark to-parchment-darker
+           parchment-texture;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Custom animations */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.shimmer {
+  animation: shimmer 3s infinite;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(212, 175, 55, 0.3) 50%,
+    transparent 100%
+  );
+  background-size: 1000px 100%;
+}
